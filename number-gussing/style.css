@@ -24,7 +24,6 @@ body {
   background: linear-gradient(to bottom left, #021b1b 30%, #053333);
   border: solid 2px #014949;
   border-radius: 30px;
-  box-shadow: 0 0 80px #013232;
   position: relative;
 }
 h1 {
@@ -34,7 +33,7 @@ h1 {
   color: white;
 }
 svg {
-  height: 50px;
+  height: 40px;
   width: 40px;
   margin-top: 0;
 }
@@ -50,6 +49,14 @@ svg {
 .hearts {
   position: absolute;
   top: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: white;
+  font-family: 'Titan one';
+  font-weight: 200;
+  gap: 20px;
+  
 }
 .hint {
   color: red;
