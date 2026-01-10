@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Titan+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to top right, #030909 30%, #042621);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  border: red 2px solid;
+  height: 400px;
+  width: 400px;
+  background: linear-gradient(to bottom left, #021b1b 30%, #053333);
+  border: solid 2px #014949;
+  border-radius: 30px;
+  box-shadow: 0 0 80px #013232;
+  position: relative;
+}
+h1 {
+  font-size: 5rem;
+  font-family: Bangers;
+  font-weight: 900;
+  color: white;
+}
+svg {
+  height: 50px;
+  width: 40px;
+  margin-top: 0;
+}
+.instruction {
+  padding: 8px 12px;
+  color: teal;
+  border: 3px solid teal;
+  border-radius: 10px;
+  background: #053535;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.hearts {
+  position: absolute;
+  top: 0;
+}
+.hint {
+  color: red;
+  font-size: 2.4rem;
+  font-weight: 900;
+  font-family: Bangers;
+  -webkit-text-stroke: 1px #ff7a7a;
+  text-shadow: 0 0 10px red;
+  position: absolute;
+  top: 140px;
+}
+input {
+  background: #004d4d;
+  height: 60px;
+  width: 250px;
+  border: 2px solid #006565;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 90px;
+}
+input::placeholder {
+  font-size: 1.4rem;
+}
+.attempts {
+  color: white;
+  text-transform: capitalize;
+  display: flex;
+  gap: 12px;
+  
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  
+}
+.attempt{
+  opacity: 0.4;
+}
+.attemptsInducator {
+  background: teal;
+  border: 4px #005656 solid;
+  font-family: "Titan one";
+  font-size: 1.2rem;
+  border-radius: 4px;
+  
+padding: 4px 8px;
+  
+}
+button{
+  background: #839d00;
+  padding: 15px 55px ;
+  font-family: Bangers;
+  color: black;
+  font-size: 2.3rem;
+  margin-top: 50px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 0 15px;
+}
