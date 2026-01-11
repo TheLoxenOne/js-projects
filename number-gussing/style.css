@@ -4,13 +4,22 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
+.parentContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
   background: linear-gradient(to top right, #030909 30%, #042621);
+  animation: 3000ms forwards ease;
+}
+@keyframes fade {
+  0% {
+    filter: grayscale(0%);
+  }
+  100% {
+    filter: grayscale(100%);
+  }
 }
 .container {
   display: flex;
@@ -30,12 +39,27 @@ h1 {
   font-size: 5rem;
   font-family: Bangers;
   font-weight: 900;
-  color: white;
+  color: yellow;
 }
 svg {
-  height: 40px;
-  width: 40px;
-  margin-top: 0;
+  height: 30px !important;
+  width: 15px !important;
+  display: inline-block;
+
+  padding: 0;
+  margin: 0;
+}
+svg path {
+  stroke: #f74949 !important;
+  stroke-width: 30px !important;
+}
+
+svg[class*="right-side"] {
+  margin-left: -2px;
+  margin-right: 10px;
+}
+svg:nth-child(even) {
+  margin-right: 10px;
 }
 .instruction {
   padding: 8px 12px;
@@ -48,16 +72,64 @@ svg {
 }
 .hearts {
   position: absolute;
-  top: 0;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   font-size: 1rem;
   color: white;
-  font-family: 'Titan one';
+  font-family: "Titan one";
   font-weight: 200;
-  gap: 20px;
-  
+  gap: 10px;
+  flex-direction: column;
 }
+.hearts-row {
+  display: flex;
+  gap: 0px;
+  min-height: 30px;
+  align-items: center;
+  animation: 1600ms ease forwards;
+  background: #410000; 
+  padding: 6px;
+  justify-content: center;
+  border: red 2px solid;
+  border-radius: 10px;
+}
+@keyframes shatter {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
+}
+
+.right-side-heart-3 path {
+  animation: forwards flash 400ms  ease-in-out 4;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes flash {
+  100%{
+    opacity: 0;
+  }
+    
+    0% {
+    transform: translateY(0);
+    fill: #ff2d2d;
+    stroke: #ff2d2d;
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    fill: white;
+    stroke: white;
+    opacity: 0.2;
+  }
+}
+
 .hint {
   color: red;
   font-size: 2.4rem;
@@ -66,7 +138,18 @@ svg {
   -webkit-text-stroke: 1px #ff7a7a;
   text-shadow: 0 0 10px red;
   position: absolute;
-  top: 140px;
+  top: 100px;
+  transition: opacity 200ms ease;
+  opacity: 0;
+  animation: forwards alternate 7 100ms ease;
+}
+@keyframes vibrate {
+  from {
+    transform: translateX(8px);
+  }
+  to {
+    transform: translateX(-8px);
+  }
 }
 input {
   background: #004d4d;
@@ -75,25 +158,27 @@ input {
   border: 2px solid #006565;
   border-radius: 10px;
   text-align: center;
-  margin-top: 90px;
+  font-size: 2rem;
+  font-family: "titan one";
+  color: white;
 }
 input::placeholder {
   font-size: 1.4rem;
+  font-family: arial;
 }
 .attempts {
   color: white;
   text-transform: capitalize;
   display: flex;
   gap: 12px;
-  
+
   height: 70px;
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 0px;
-  
+  bottom: 30px;
 }
-.attempt{
+.attempt {
   opacity: 0.4;
 }
 .attemptsInducator {
@@ -102,13 +187,12 @@ input::placeholder {
   font-family: "Titan one";
   font-size: 1.2rem;
   border-radius: 4px;
-  
-padding: 4px 8px;
-  
+
+  padding: 4px 8px;
 }
-.submit{
+.submit {
   background: #839d00;
-  padding: 15px 55px ;
+  padding: 15px 55px;
   font-family: Bangers;
   color: black;
   font-size: 2.3rem;
@@ -117,14 +201,102 @@ padding: 4px 8px;
   border-radius: 10px;
   box-shadow: inset 0 0 15px;
 }
-.action{
-  
+.action {
+  padding: 15px 25px;
+  background: #b6d907c0;
+  font-size: 1.6rem;
+  color: black;
+  font-family: "Titan one";
+  border-radius: 12px;
+  border: #d7ff0f 3px solid;
+  margin-top: 20px;
+  animation: shake 1600ms infinite forwards ease-in-out;
+  animation-delay: 1000ms;
 }
-.infoCard{
+@keyframes shake {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  6% {
+    transform: rotateZ(5deg);
+  }
+  12% {
+    transform: rotateZ(-5deg);
+  }
+  18% {
+    transform: rotateZ(5deg);
+  }
+  24% {
+    transform: rotateZ(-5deg);
+  }
+
+  30% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+.infoCard {
   height: 300px;
   width: 400px;
-  background: white;
+  background: linear-gradient(to top right, #0f5f00 30%, #00d72c);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  border-radius: 20px;
+  border: 5px solid lime;
+  box-shadow: 0 0 8px #00ff0043;
+  color: white;
+  font-size: 3rem;
+  font-family: "Titan one";
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  margin-top: 200vh;
+  transition: 800ms cubic-bezier(0, 0.86, 0.36, 1.01);
+}
+.trophy {
+  font-size: 5rem;
+  margin-top: 30px;
+
+  animation: appear 1000ms forwards ease infinite alternate;
+}
+@keyframes appear {
+  0% {
+    scale: 1.3;
+  }
+  100% {
+    scale: 0.8;
+  }
+}
+.message {
+  text-align: center;
+  width: 20ch;
+}
+.prohibitedSvg {
+  width: 100px !important;
+  height: 100px !important;
+  animation: infinite 2000ms forwards ease-in-out;
+}
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(540deg);
+    scale: 1.2;
+  }
+  50% {
+    transform: rotateZ(540deg);
+  }
+  60% {
+    transform: rotateZ(540deg);
+  }
+  100% {
+    transform: rotateZ(540deg);
+  }
 }
