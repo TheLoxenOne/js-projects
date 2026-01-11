@@ -53,10 +53,9 @@ svg {
   align-items: center;
   font-size: 1rem;
   color: white;
-  font-family: 'Titan one';
+  font-family: "Titan one";
   font-weight: 200;
   gap: 20px;
-  
 }
 .hint {
   color: red;
@@ -85,15 +84,14 @@ input::placeholder {
   text-transform: capitalize;
   display: flex;
   gap: 12px;
-  
+
   height: 70px;
   align-items: center;
   justify-content: center;
   position: absolute;
   bottom: 0px;
-  
 }
-.attempt{
+.attempt {
   opacity: 0.4;
 }
 .attemptsInducator {
@@ -102,13 +100,12 @@ input::placeholder {
   font-family: "Titan one";
   font-size: 1.2rem;
   border-radius: 4px;
-  
-padding: 4px 8px;
-  
+
+  padding: 4px 8px;
 }
-.submit{
+.submit {
   background: #839d00;
-  padding: 15px 55px ;
+  padding: 15px 55px;
   font-family: Bangers;
   color: black;
   font-size: 2.3rem;
@@ -117,14 +114,30 @@ padding: 4px 8px;
   border-radius: 10px;
   box-shadow: inset 0 0 15px;
 }
-.action{
-  
+.action {
+  padding: 20px 25px;
+  background:#a1c10072;
+  font-size: 1.6rem;
+  color: black;
+  font-family: 'Titan one';
+  border-radius: 12px;
+  border: #a1c100 3px solid;
 }
-.infoCard{
+.infoCard {
   height: 300px;
   width: 400px;
-  background: white;
+  background: linear-gradient(to top right, #0f5f00 30%, #00d72c);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  border-radius: 20px;
+  border: 5px solid lime;
+  box-shadow: 0 0 8px lime;
+  color: white;
+  font-size: 3rem;
+  font-family: "Titan one";
+  flex-direction: column;
+  justify-content: space-around;
+
 }
