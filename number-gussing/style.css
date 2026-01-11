@@ -116,12 +116,13 @@ input::placeholder {
 }
 .action {
   padding: 20px 25px;
-  background:#a1c10072;
+  background: #b6d907c0;
   font-size: 1.6rem;
   color: black;
-  font-family: 'Titan one';
+  font-family: "Titan one";
   border-radius: 12px;
-  border: #a1c100 3px solid;
+  border:#d7ff0f 3px solid;
+  
 }
 .infoCard {
   height: 300px;
@@ -133,11 +134,15 @@ input::placeholder {
   position: fixed;
   border-radius: 20px;
   border: 5px solid lime;
-  box-shadow: 0 0 8px lime;
+  box-shadow: 0 0 8px #00ff0043;
   color: white;
   font-size: 3rem;
   font-family: "Titan one";
   flex-direction: column;
   justify-content: space-around;
-
+  text-transform: uppercase;
+}
+.trophy{
+  font-size: 5rem;
+  margin-top: 30px;
 }
