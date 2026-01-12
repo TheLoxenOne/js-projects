@@ -45,9 +45,8 @@ svg {
   height: 30px !important;
   width: 15px !important;
   display: inline-block;
-
-  padding: 0;
-  margin: 0;
+margin-left: 8px;
+  
 }
 svg path {
   stroke: #f74949 !important;
@@ -61,7 +60,7 @@ svg[class*="right-side"] {
 svg:nth-child(even) {
   margin-right: 10px;
 }
-.instruction {
+.range {
   padding: 8px 12px;
   color: teal;
   border: 3px solid teal;
@@ -69,6 +68,8 @@ svg:nth-child(even) {
   background: #053535;
   font-size: 18px;
   margin-bottom: 30px;
+  display: flex;
+  gap: 4px;
 }
 .hearts {
   position: absolute;
@@ -95,6 +96,7 @@ svg:nth-child(even) {
   justify-content: center;
   border: red 2px solid;
   border-radius: 10px;
+  
 }
 @keyframes shatter {
   0% {
@@ -106,7 +108,38 @@ svg:nth-child(even) {
 }
 
 .right-side-heart-3 path {
-  animation: forwards flash 400ms  ease-in-out 4;
+  animation: forwards 
+  400ms  ease-in-out 4;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.left-side-heart-3 path {
+  animation: forwards 
+  400ms  ease-in-out 4;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.right-side-heart-2 path {
+  animation: forwards 
+  400ms  ease-in-out 4;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.left-side-heart-2 path {
+  animation: forwards 
+  400ms  ease-in-out 4;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.right-side-heart-1 path {
+  animation: forwards 
+  400ms  ease-in-out 4;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.left-side-heart-1 path {
+  animation: forwards 
+  400ms  ease-in-out 4;
   transform-origin: center;
   transform-box: fill-box;
 }
