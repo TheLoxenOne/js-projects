@@ -143,6 +143,20 @@ svg:nth-child(even) {
   transform-origin: center;
   transform-box: fill-box;
 }
+.right-side-heart-4 path {
+  animation: forwards 
+  400ms  ease-in-out 4;
+  transform-origin: center;
+  transform-box: fill-box;
+  
+}
+ .left-side-heart-4 path {
+  animation: forwards 
+  400ms  ease-in-out 4;
+  transform-origin: center;
+  transform-box: fill-box;
+  
+}
 
 @keyframes flash {
   100%{

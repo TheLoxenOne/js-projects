@@ -5,6 +5,8 @@ const rightSideHeart2 = document.querySelector(".right-side-heart-2 path");
 const leftSideHeart2 = document.querySelector(".left-side-heart-2 path");
 const rightSideHeart1 = document.querySelector(".right-side-heart-1 path");
 const leftSideHeart1 = document.querySelector(".left-side-heart-1 path");
+const rightSideHeart4 = document.querySelector(".right-side-heart-4 path");
+const leftSideHeart4 = document.querySelector(".left-side-heart-4 path");
 let randomNumber = Math.floor(Math.random() * 100 + 1);
 const submit = document.querySelector(".submit");
 const message = document.querySelector(".message");
@@ -33,7 +35,7 @@ function checkNumber() {
   else{
     uRange.textContent = userNumber;
   }
-  if (attemptCounter >= 6) {
+  if (attemptCounter > 8) {
     parentContainer.style.pointerEvents = "none";
     parentContainer.style.animationName = "fade";
     infoCard.style.marginTop = "0vh";
@@ -50,19 +52,27 @@ function checkNumber() {
     heartsRow.style.animationName = "shatter";
     statusGraphics.textContent = "💀";
     statusGraphics.style.display = "block";
-  } else if (attemptCounter === 1) {
+  } 
+  else if (attemptCounter === 1) {
+    rightSideHeart4.style.animationName = "flash";
+  }
+   else if (attemptCounter === 2) {
+    leftSideHeart4.style.animationName = "flash";
+  }
+  else if (attemptCounter === 3) {
     rightSideHeart3.style.animationName = "flash";
-  } else if (attemptCounter === 2) {
-    leftSideHeart3.style.animationName = "flash";
-  } else if (attemptCounter === 3) {
-    rightSideHeart2.style.animationName = "flash";
   } else if (attemptCounter === 4) {
-    leftSideHeart2.style.animationName = "flash";
+    leftSideHeart3.style.animationName = "flash";
   } else if (attemptCounter === 5) {
-    rightSideHeart1.style.animationName = "flash";
+    rightSideHeart2.style.animationName = "flash";
   } else if (attemptCounter === 6) {
+    leftSideHeart2.style.animationName = "flash";
+  } else if (attemptCounter === 7) {
+    rightSideHeart1.style.animationName = "flash";
+  } else if (attemptCounter === 8) {
     leftSideHeart1.style.animationName = "flash";
   }
+   
 
   hintText.style.animationName = "none";
   void hintText.offsetWidth;
@@ -110,7 +120,7 @@ function checkNumber() {
 actionButton.onclick = function () {
   const numberInput = document.querySelector(".input");
   const userNumber = Number(numberInput.value);
-  let randomNumber = Math.floor(Math.random() * 100 + 1);
+  randomNumber = Math.floor(Math.random() * 100 + 1);
   attemptCounter = 0;
    let attemptInducator = document.querySelector(".attemptsInducator");
    attemptInducator.textContent = attemptCounter;
@@ -124,9 +134,21 @@ actionButton.onclick = function () {
     leftSideHeart2.style.animationName = "none";
     rightSideHeart1.style.animationName = "none";
     leftSideHeart1.style.animationName = "none";
+    rightSideHeart4.style.animationName = "none";
+    leftSideHeart4.style.animationName = "none";
     heartsRow.style.animationName = "none"
     void heartsRow.offsetWidth
     hintText.style.opacity = "0"
     lRange.textContent = "1"
     uRange.textContent = "100"
 };
+window.addEventListener( "keydown", function(e){
+  if(e.key === "Enter"){
+    if(infoCard.style.marginTop === "0vh"){
+      actionButton.click()
+    }
+    else{
+      checkNumber()
+    }
+  }
+})
