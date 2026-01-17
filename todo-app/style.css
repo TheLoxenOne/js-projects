@@ -18,39 +18,41 @@
 h1 {
   color: white;
   font-size: 3rem;
-  
+
   font-family: Sanchez;
   text-align: center;
   font-weight: 600;
 }
-.done {
-  width: 440px;
-  height: 100px;
-  background: #323232;
-  border-radius: 30px;
-  box-shadow: 0 0 5px #292929;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.3rem;
-  font-family: Sanchez;
-  
-  margin-bottom: 20px;
-}
 .notDone {
-  width: 440px;
-  height: 100px;
-  background: #323232;
+  padding: 50px 110px;
+  background: linear-gradient(to top right, #323232, #1b1b1b);
   border-radius: 30px;
   box-shadow: 0 0 5px #292929;
-
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-size: 1.3rem;
+  gap: 20px;
   font-family: Sanchez;
-  
+  border: 2px #323232 solid;
+}
+.done {
+  padding: 50px 90px;
+  background: linear-gradient(to top right, #323232, #1b1b1b);
+  border-radius: 30px;
+  box-shadow: 0sol50px #4b4b4b86;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.3rem;
+  gap: 20px;
+  font-family: Sanchez;
+  border: 2px #323232 solid;
 }
 .input {
   padding: 25px;
@@ -62,6 +64,16 @@ h1 {
   color: white;
   text-align: center;
   font-size: 1.5rem;
+}
+@keyframes move {
+  from {
+    transform: translateY(-170px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 button {
   padding: 20px;
@@ -86,4 +98,21 @@ button {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+.taskContainer {
+  width: 400px;
+  height: 50px;
+  background: #434343;
+  padding: 30px;
+  border-radius: 16px;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.options svg{
+  margin: 0 !important;
+  width: 25px !important;
+  height: 25px !important;
+  
 }
