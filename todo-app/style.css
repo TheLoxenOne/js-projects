@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Port+Lligat+Slab&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.parentContainer {
+  display: flex;
+  background: #0b0b0b;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  color: white;
+  gap: 40px;
+}
+h1 {
+  color: white;
+  font-size: 3rem;
+  
+  font-family: Sanchez;
+  text-align: center;
+  font-weight: 600;
+}
+.done {
+  width: 440px;
+  height: 100px;
+  background: #323232;
+  border-radius: 30px;
+  box-shadow: 0 0 5px #292929;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-family: Sanchez;
+  
+  margin-bottom: 20px;
+}
+.notDone {
+  width: 440px;
+  height: 100px;
+  background: #323232;
+  border-radius: 30px;
+  box-shadow: 0 0 5px #292929;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-family: Sanchez;
+  
+}
+.input {
+  padding: 25px;
+  border: solid 2px#313131;
+  background: #222;
+  border-radius: 20px;
+  box-shadow: #222 0 0 10px;
+  font-family: "port lligat slab";
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+button {
+  padding: 20px;
+  color: white;
+  background: linear-gradient(purple, #360836);
+  box-shadow: 0 0 10px #800080b6;
+  border: none;
+  margin-left: 30px;
+  border-radius: 12px;
+  font-size: 2rem;
+  font-family: "port lligat slab";
+}
+.inputAction {
+  display: flex;
+  align-items: center;
+}
+.modeControl {
+  background: #222;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #2a2a2a;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
