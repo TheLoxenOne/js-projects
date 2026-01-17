@@ -110,9 +110,42 @@ button {
   align-items: center;
   justify-content: space-between;
 }
-.options svg{
+.options svg {
   margin: 0 !important;
   width: 25px !important;
   height: 25px !important;
-  
+}
+.checkTickBox {
+  height: 30px;
+  width: 30px;
+  background: gray;
+}
+.textCheckContainer {
+  display: flex;
+
+  gap: 20px;
+}
+.checkTickBox {
+  border-radius: 4px;
+  background: silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkTickMark svg {
+  width: 50px;
+  height: 60px;
+  /* background: black !important; */
+  /* stroke-width: 2px !important; */
+  animation:  600ms ease-in forwards;
+  stroke-dasharray: 26.376968383789062;
+  stroke-dashoffset: 26.376968383789062;
+}
+@keyframes draw {
+  from {
+    stroke-dashoffset: 26.376968383789062;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
