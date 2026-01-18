@@ -4,6 +4,7 @@ const done = document.querySelector(".done");
 const addBtn = document.querySelector(".add");
 
 const doneTasks = document.querySelector(".doneTasks");
+
 addBtn.onclick = () => {
   const inputValue = input.value;
 
@@ -11,7 +12,7 @@ addBtn.onclick = () => {
   if (currentNoTaskMsg) {
     currentNoTaskMsg.remove();
   }
-  const taskInput = document.createElement("p");
+  const taskInput = document.createElement("div");
   const taskContainer = document.createElement("div");
   const textCheckContainer = document.createElement("div");
   const optionsContainer = document.createElement("div");
@@ -20,6 +21,14 @@ addBtn.onclick = () => {
 		<ellipse cx="146.47" cy="-287.04" rx="2.06" ry="2.07" style="fill:#FFFFFF;" />
 		<ellipse cx="146.47" cy="-280.95" rx="2.06" ry="2.07" style="fill:#FFFFFF;" />
 		<ellipse cx="146.47" cy="-275.1" rx="2.06" ry="2.07" style="fill:#FFFFFF;" />
+	</g>
+</svg>`;
+  const line = document.createElement("svg");
+  line.classList.add("line");
+  line.classList.add("line");
+  line.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="196" height="11" viewBox="0 0 196 11" preserveAspectRatio="xMidYMid meet">
+	<g transform="matrix(1, 0, 0, 1, 97.99996948242188, 560.4187622070312)">
+		<rect x="-98" y="-560.42" width="20" height="11" rx="5" ry="5" style="fill:#FFFFFF;" />
 	</g>
 </svg>`;
   const checkTickBox = document.createElement("div");
@@ -52,6 +61,7 @@ addBtn.onclick = () => {
     checkTickBox.append(checkTickMark);
     textCheckContainer.append(taskInput);
     taskInput.textContent = inputValue;
+    taskInput.style.textTransform = "capitalize";
     // taskInput.style.animation = "move 600ms forwards";
     taskContainer.style.animation = "move 650ms forwards";
     notDone.append(taskContainer);
@@ -69,18 +79,18 @@ addBtn.onclick = () => {
         done.style.padding = "30px";
         notDone.style.padding = "30px";
         const currentDone = document.querySelector(".doneTasks");
-        checkTickBox.onclick = null
+        checkTickBox.onclick = null;
 
         if (currentDone) {
           currentDone.remove();
         }
       }, 800);
-
+      taskInput.append(line);
       taskContainer.style.animationDelay = "0ms";
     };
     requestAnimationFrame(() => {
-      taskContainer.style.animationName = "move 650ms forwards"
-      })
+      taskContainer.style.animationName = "move 650ms forwards";
+    });
     notDone.style.padding = "30px";
     // notDone.style.transition = "padding-top, padding-bottom 500ms ease"
   } else {
