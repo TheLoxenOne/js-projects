@@ -1,7 +1,9 @@
 const input = document.querySelector(".input");
 const notDone = document.querySelector(".notDone");
+const done = document.querySelector(".done");
 const addBtn = document.querySelector(".add");
 const noTaskMsg = document.querySelector(".noTasksMsg");
+const doneTasks = document.querySelector(".doneTasks");
 addBtn.onclick = () => {
   const inputValue = input.value;
 
@@ -53,12 +55,20 @@ addBtn.onclick = () => {
 
     taskContainer.append(optionsContainer);
     input.value = "";
- 
+
     checkTickBox.onclick = () => {
-    
       const path = checkTickMark.querySelector("path");
+
+      path.style.animation = "draw 600ms ease-in forwards";
+      setTimeout(() => {
+        done.append(taskContainer);
+        done.style.padding = "30px";
+        notDone.style.padding = "30px";
+        doneTasks.remove();
+      }, 800);
+
       
-      path.style.animation = "draw 600ms ease-in forwards";;
+      taskContainer.style.animationDelay = "0ms";
     };
     noTaskMsg.remove();
     notDone.style.padding = "30px";
