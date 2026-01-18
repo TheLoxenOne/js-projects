@@ -2,11 +2,15 @@ const input = document.querySelector(".input");
 const notDone = document.querySelector(".notDone");
 const done = document.querySelector(".done");
 const addBtn = document.querySelector(".add");
-const noTaskMsg = document.querySelector(".noTasksMsg");
+
 const doneTasks = document.querySelector(".doneTasks");
 addBtn.onclick = () => {
   const inputValue = input.value;
 
+  const currentNoTaskMsg = document.querySelector(".noTasksMsg");
+  if (currentNoTaskMsg) {
+    currentNoTaskMsg.remove();
+  }
   const taskInput = document.createElement("p");
   const taskContainer = document.createElement("div");
   const textCheckContainer = document.createElement("div");
@@ -64,13 +68,19 @@ addBtn.onclick = () => {
         done.append(taskContainer);
         done.style.padding = "30px";
         notDone.style.padding = "30px";
-        doneTasks.remove();
+        const currentDone = document.querySelector(".doneTasks");
+        checkTickBox.onclick = null
+
+        if (currentDone) {
+          currentDone.remove();
+        }
       }, 800);
 
-      
       taskContainer.style.animationDelay = "0ms";
     };
-    noTaskMsg.remove();
+    requestAnimationFrame(() => {
+      taskContainer.style.animationName = "move 650ms forwards"
+      })
     notDone.style.padding = "30px";
     // notDone.style.transition = "padding-top, padding-bottom 500ms ease"
   } else {

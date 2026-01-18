@@ -25,12 +25,15 @@ h1 {
 }
 
 .notDone {
-  width: 440px;
-  height: 240px;
+  width: 460px;
+ 
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: visible;
+   min-height: 120px;
   background: linear-gradient(to top right, #323232, #1b1b1b);
   border-radius: 30px;
   box-shadow: 0 0 5px #292929;
-  overflow: hidden;
+  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +47,7 @@ h1 {
   padding: 50px 90px;
   background: linear-gradient(to top right, #323232, #1b1b1b);
   border-radius: 30px;
-  box-shadow: 0sol50px #4b4b4b86;
+  box-shadow: 0 0 10px #4b4b4b86;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
@@ -102,9 +105,9 @@ button {
 }
 .taskContainer {
   width: 400px;
-  height: 50px;
+ 
   background: #434343;
-  padding: 30px;
+  padding: 15px;
   border-radius: 16px;
   display: flex;
 
@@ -123,7 +126,7 @@ button {
 }
 .textCheckContainer {
   display: flex;
-
+  
   gap: 20px;
 }
 .checkTickBox {
@@ -133,7 +136,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-.checkTickMark svg {
+.checkTickMark svg path{
   width: 50px;
   height: 60px;
   /* background: black !important; */
