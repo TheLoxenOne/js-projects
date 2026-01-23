@@ -27,6 +27,7 @@ function checkNumber() {
   attemptInducator.textContent = attemptCounter;
   const numberInput = document.querySelector(".input");
   const userNumber = Number(numberInput.value);
+  numberInput.textContent = ""
   if (userNumber < randomNumber) {
     lRange.textContent = userNumber;
   } else if (userNumber > 100) {

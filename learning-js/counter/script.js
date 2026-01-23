@@ -4,16 +4,16 @@ const minusBtn = document.querySelector(".minusBtn")
 const restBtn = document.querySelector(".restBtn")
 const plusBtn = document.querySelector(".plusBtn")
 let counter = 0
-plusBtn.onclick =  function(){
+plusBtn.onclick =  () =>{
   
   counter++
   number.textContent = counter
 }
-restBtn.onclick = function(){
+restBtn.onclick = () => {
  counter = 0
   number.textContent = 0
 }
-minusBtn.onclick = function(){
+minusBtn.onclick = () =>{
   
   counter--
   number.textContent = counter
