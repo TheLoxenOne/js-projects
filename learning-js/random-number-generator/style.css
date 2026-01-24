@@ -1,26 +1,97 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-body{
+:root {
+  --base-color: #222b2a;
+  --secondary: #30423b;
+}
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
+  background: var(--base-color);
+  color: white;
+  font-family: Tomorrow;
+  gap: 64px;
 }
-.buttonContainer{
+.buttonContainer {
   position: relative;
   display: inline-block;
 }
-#pressParticle{
+#pressParticle {
   position: absolute;
-  top: -20;
+  top: 20%;
   left: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 300px;
+  height: 300px;
 }
-.generateBtn{
-  
+.generateBtn {
+  position: relative;
+  z-index: 2;
+  padding: 16px 64px;
+  font-size: 1.6rem;
+  font-family: Tomorrow;
+  border-radius: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  background: linear-gradient(to right, #00ff5e, #0092da 70%);
+  box-shadow: 0 0 30px #00ff5e74;
+  transition: 100ms ease-in;
+}
+.rangeContainer {
+  display: flex;
+  gap: 128px;
+}
+.container {
+  margin: 24px;
+  width: 80%;
+  padding: 16px;
+  background: var(--secondary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 376px;
+  border-radius: 40px;
+  box-shadow: 0 0 15px #00000061;
+}
+h1 {
+  font-size: 3.2rem;
+}
+.numberContainer {
+  height: 56px;
+  width: 80px;
+  padding: 16px;
+  background: #1f6c4f;
+  border: 4px solid #339671;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  font-family: Tomorrow;
+  font-size: 1.2rem;
+}
+.infoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.number {
+  background: #1f6c4f;
+  padding: 8px 16px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px #00000061;
+  display: none;
+}
+.generateBtn:active {
+  scale: 0.8;
 }
