@@ -1,20 +1,21 @@
-const counterTxt = document.querySelector(".counterTxt")
-const number = document.querySelector(".number")
-const minusBtn = document.querySelector(".minusBtn")
-const restBtn = document.querySelector(".restBtn")
-const plusBtn = document.querySelector(".plusBtn")
-let counter = 0
-plusBtn.onclick =  () =>{
+const counterTxt = document.querySelector(".counterTxt");
+const number = document.querySelector(".number");
+const minusBtn = document.querySelector(".minusBtn");
+const restBtn = document.querySelector(".restBtn");
+const plusBtn = document.querySelector(".plusBtn");
+let counter = 0;
+if (number) {
+plusBtn.onclick = () => {
   
-  counter++
-  number.textContent = counter
-}
+    counter++;
+    number.textContent = counter;
+  };
 restBtn.onclick = () => {
- counter = 0
-  number.textContent = 0
-}
-minusBtn.onclick = () =>{
-  
-  counter--
-  number.textContent = counter
+  counter = 0;
+  number.textContent = 0;
+};
+minusBtn.onclick = () => {
+  counter--;
+  number.textContent = counter;
+};
 }

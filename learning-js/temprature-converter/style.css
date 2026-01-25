@@ -1,0 +1,16 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+.select {
+  background: green;
+  width: 128px;
+  height: 64px;
+  border: 2px orange solid;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 8px;
+}

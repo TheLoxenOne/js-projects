@@ -16,4 +16,4 @@ if (generateBtn) {
   };
 }
 
-console.log(randomNum);
+
