@@ -1,17 +1,115 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <select name="options" id="" class="select">
-      <option>celcius</option>
-      <option>Faranite</option>
-      <option>kelvin</option>
-    </select>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Temprateure convertor</h1>
+        <div class="scaleSelectorContainer">
+        <div class="from">
+            <label
+                ><input name="scale" value="c" type="radio" checked />
+                Celsius</label
+            >
+            <label
+                ><input name="scale" value="f" type="radio" /> Fahrenheit</label
+            >
+            <label><input name="scale" value="k" type="radio" /> Kelvin</label>
+        </div>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:svg="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="32.26"
+            height="32.26"
+            viewBox="0 0 16.13 16.13"
+            preserveAspectRatio="xMidYMid meet"
+        >
+            <g
+                transform="matrix(1, 0, 0, 1, 631.6712646484375, -93.79901123046875)"
+            >
+                <g
+                    transform="matrix(-0.000000005957557114300016, 1.0000003576278687, -1.0000003576278687, -0.000000005957557114300016, -526.1868896484375, 723.48828125)"
+                >
+                    <path
+                        d="M-628.69,95.56 L-624.92,90.35 L-620.99,95.56"
+                        fill-rule="evenodd"
+                        style="
+                            fill: none;
+                            stroke: #ffffff;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-width: 2;
+                        "
+                    />
+                    <line
+                        transform="matrix(0.00000000547488587798739, -0.9999995827674866, 0.9999995827674866, 0.00000000547488587798739, -718.4472045898438, -526.3439331054688)"
+                        x1="-630.83"
+                        y1="93.52"
+                        x2="-616.7"
+                        y2="93.52"
+                        style="
+                            fill: none;
+                            stroke: #ffffff;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-width: 2;
+                        "
+                    />
+                </g>
+                <g
+                    transform="matrix(-0.000000002945206745152973, -1.0000009536743164, 1.0000009536743164, -0.000000002945206745152973, -723.48828125, -519.7582397460938)"
+                >
+                    <path
+                        d="M-628.69,98.02 L-624.92,92.82 L-620.99,98.02"
+                        fill-rule="evenodd"
+                        style="
+                            fill: none;
+                            stroke: #ffffff;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-width: 2;
+                        "
+                    />
+                    <line
+                        transform="matrix(0.00000000547488587798739, -0.9999995827674866, 0.9999995827674866, 0.00000000547488587798739, -718.4472045898438, -526.3439331054688)"
+                        x1="-633.29"
+                        y1="93.52"
+                        x2="-619.16"
+                        y2="93.52"
+                        style="
+                            fill: none;
+                            stroke: #ffffff;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-width: 2;
+                        "
+                    />
+                </g>
+            </g>
+        </svg>
+        <div class="to">
+            <label
+                ><input name="scale" value="c" type="radio" checked />
+                Celsius</label
+            >
+            <label
+                ><input name="scale" value="f" type="radio" /> Fahrenheit</label
+            >
+            <label><input name="scale" value="k" type="radio" /> Kelvin</label>
+        </div>
+</div>
+        <div class="container">
+            <input type="text" />
+            <button id="convertBtn">Convert</button>
+        </div>
+        <div class="resultContainer">
+            <h1></h1>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
